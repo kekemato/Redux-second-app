@@ -2,7 +2,7 @@ import { createStore, combineReducers, compose, applyMiddleware } from 'redux'
 import thunk from 'redux-thunk'
 
 import counter from './state/counter'
-import randomUsers, { fetchUsersAsyncAction } from './state/randomUsers'
+import randomUsers from './state/randomUsers'
 
 const reducer = combineReducers({
     counter,
@@ -17,5 +17,3 @@ export const store = createStore(
         applyMiddleware(thunk)
     )
 )
-
-store.dispatch(fetchUsersAsyncAction())

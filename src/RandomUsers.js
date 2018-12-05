@@ -6,7 +6,7 @@ import { fetchUsersAsyncAction } from './state/randomUsers'
 class RandomUsers extends React.Component {
     componentDidMount() {
         this.props._fetchUsersAsyncAction(
-            'https://randomuser.me/apia'
+            'https://randomuser.me/api/?results=20'
         )
     }
 
